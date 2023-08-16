@@ -46,14 +46,6 @@ export function Counter(ctr) {
 	return COUNTER;
 }
 
-/*
-	action = 'notify',
-	type = ttype or 'primary',
-	duration = length,
-	text = text,
-	caption = capt,
-*/
-
 /**
  * @param {HTMLElement} elm
  * @param {string} classList
@@ -63,7 +55,7 @@ function $c(elm, classList = '') {
 	e.className = classList;
 	return e;
 }
-// const cont = document.querySelector('#notif-container');
+
 const cont = document.querySelector('#__notif-container') || $c('div');
 cont.id = '__notif-container';
 document.body.appendChild(cont);
