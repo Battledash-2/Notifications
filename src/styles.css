@@ -48,7 +48,7 @@ body {
 	padding: 0.75rem 0.5rem 0.75rem 0.5rem;
 }
 #__notif-container > .notif.active {
-	margin-left: calc(var(--notif-size) / 2);
+	margin-left: 50%;
 }
 #__notif-container > .notif.clickable {
 	cursor: pointer;
@@ -95,4 +95,13 @@ body {
 	background: #333;
 	text-align: center;
 	box-shadow: inherit;
+}
+
+@media screen and (max-width: 414px) {
+	#__notif-container {
+		width: 100dvw;
+		overflow: hidden;
+		left: 0;
+		top: 0;
+	}
 }
