@@ -57,7 +57,7 @@ body {
 #__notif-container > .notif > h3 > span {
 	font-size: 0.85rem;
 	position: relative;
-	top: 0.1rem;
+	top: 0.075rem;
 	margin-right: 0.25rem;
 }
 #__notif-container > .notif > h3 {
