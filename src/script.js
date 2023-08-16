@@ -102,9 +102,12 @@ export function ShowNotification(icon = 'fa-regular fa-bell', color = 'info', du
 
 	if (COUNTER) {
 		const notifExists = NotifExists(icon, notif.style.backgroundColor, text, caption);
-		if (notifExists) {
+		if (notifExists && cont.firstElementChild !== notifExists) {
 			notif.setAttribute(COUNTER_ATTR_NAME, Math.min(notifExists.hasAttribute(COUNTER_ATTR_NAME) ? parseInt(notifExists.getAttribute(COUNTER_ATTR_NAME)) + 1 : 2, COUNTER_MAX));
 			remove(notifExists);
+		} else if (notifExists && cont.firstElementChild === notifExists) {
+			notifExists.setAttribute(COUNTER_ATTR_NAME, Math.min(notifExists.hasAttribute(COUNTER_ATTR_NAME) ? parseInt(notifExists.getAttribute(COUNTER_ATTR_NAME)) + 1 : 2, COUNTER_MAX));
+			return notifExists;
 		}
 	}
 
