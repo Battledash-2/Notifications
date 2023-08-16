@@ -52,7 +52,7 @@ export function Counter(ctr) {
  */
 function $c(elm, classList = '') {
 	const e = document.createElement(elm);
-	e.className = classList;
+	if (classList) e.className = classList;
 	return e;
 }
 
