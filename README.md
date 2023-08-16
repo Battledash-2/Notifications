@@ -10,7 +10,7 @@ Using [Fontawesome](https://fontawesome.com/), you can use tons of clean icons.
 To use Notifications, first **import** the stylesheets in the head, like this:
 
 ```html
-<link rel="stylesheet" href="https://battledash-2.github.io/Notifications/src/styles.css" />
+<link rel="stylesheet" href="https://Battledash-2.github.io/Notifications/src/styles.css" />
 <!-- or href="https://cdn.jsdelivr.net/gh/Battledash-2/Notifications@latest/src/styles.css" /> -->
 ```
 
@@ -18,7 +18,7 @@ To send notifications, **import** the file using the ES6 `import` syntax. Rememb
 
 ```html
 <script type="module">
-	import * as Notifications from 'https://battledash-2.github.io/Notifications/src/script.js'; // or 'https://cdn.jsdelivr.net/gh/Battledash-2/Notifications@latest/src/script.js';
+	import * as Notifications from 'https://Battledash-2.github.io/Notifications/src/script.js'; // or 'https://cdn.jsdelivr.net/gh/Battledash-2/Notifications@latest/src/script.js';
 
 	Notifications.ShowNotification(null, 'warning', Infinity, 'Hello!', 'INFO');
 </script>
