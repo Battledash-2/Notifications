@@ -59,6 +59,6 @@ Notifications will be referred to as `API`.
 
 ## You can find an example in `./test/index.html`! 🧪
 
-Pictures:
-![example picture](https://raw.githubusercontent.com/Battledash-2/Notifications/main/screenshots/screenshot0.png)
+Pictures:<br/>
+![example picture](https://raw.githubusercontent.com/Battledash-2/Notifications/main/screenshots/screenshot0.png)<br/>
 ![example picture](https://raw.githubusercontent.com/Battledash-2/Notifications/main/screenshots/screenshot1.png)
