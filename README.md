@@ -61,4 +61,5 @@ Notifications will be referred to as `API`.
 
 ### Pictures:<br/>
 
-(coming)
+![example picture](https://raw.githubusercontent.com/Battledash-2/Notifications/main/screenshots/screenshot0.png)<br/>
+![example picture](https://raw.githubusercontent.com/Battledash-2/Notifications/main/screenshots/screenshot1.png)
