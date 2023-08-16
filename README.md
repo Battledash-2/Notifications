@@ -51,7 +51,7 @@ Notifications will be referred to as `API`.
 
 > ### `function Icons(icns?: Object)`
 
--   Sets the default icons object if provided. If the key is also in **Colors** and the _color_ for `API.ShowNotification` is a property of **Colors**, it will set the icon to a the corresponding value here.<br />_Returns the new icons object._
+-   Sets the default icons object if provided. If the key is also in **Colors** and the _color_ for `API.ShowNotification` is a property of **Colors**, it will set the icon to the corresponding value here.<br />_Returns the new icons object._
 
 > ### `function Colors(clrs?: Object)`
 
