@@ -36,25 +36,25 @@ Notifications will be referred to as `API`.
 
 -   Creates a new notifications and adds it to the screen.<br/> _Returns the created element._
 
-> ### `API.NotifExists(icon: string, color: string, text: string, caption: string)`
+> ### `API.NotifExists(icon: string, color: string, text: string, caption: string): HTMLElement | null;`
 
 -   Checks if a notifications with the provided properties exists.<br/>_Returns null or the element found._
 
 #### Configuration
 
-> ### `function Max(max?: number)`
+> ### `function Max(max?: number): number;`
 
 -   Sets the **max amount of notifications** on the screen at once if provided.<br />_Returns the new max._
 
-> ### `function CounterMax(max?: number)`
+> ### `function CounterMax(max?: number): number;`
 
 -   Sets the **max amount** for the small counter if provided.<br />_Returns the new counter max._
 
-> ### `function Icons(icns?: Object)`
+> ### `function Icons(icns?: Object): Object;`
 
 -   Sets the default icons object if provided. If the key is also in **Colors** and the _color_ for `API.ShowNotification` is a property of **Colors**, it will set the icon to the corresponding value here.<br />_Returns the new icons object._
 
-> ### `function Colors(clrs?: Object)`
+> ### `function Colors(clrs?: Object): Object;`
 
 -   Sets the default colors object if provided. If colors has a property, it should also be in `Icons`. If you provide a key of **Colors** into the _color_ for `API.ShowNotification`, it will set it to the value from this object, along with setting the Icon to the value from the `Icons` object.<br />_Returns the new colors object._
 
