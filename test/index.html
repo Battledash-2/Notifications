@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../src/styles.css" />
+		<title>Notifications</title>
+	</head>
+	<body>
+		<template>
+			<div class="notif active">
+				<h3><span class="fa-regular fa-bell"></span>hi</h3>
+				<p>Hello</p>
+			</div>
+		</template>
+		<script type="module">
+			import * as Notifications from '../src/script.js';
+
+			onclick = (e) => e.target === document.documentElement && Notifications.ShowNotification(null, 'info', Infinity, 'Awesomeness!', 'INFO');
+		</script>
+	</body>
+</html>

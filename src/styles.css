@@ -1,0 +1,94 @@
+@import url("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css");
+
+html, body, * {
+	padding: 0;
+	margin: 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+	overflow: hidden;
+}
+
+:root {
+	--notif-size: 20dvw; /* 20dvw is the default width (dvw is the viewport width) */
+	--transition-speed: 250ms;
+}
+
+#__notif-container {
+	/* overflow: hidden; */
+	position: absolute;
+	right: 0;
+	height: 100dvh;
+	width: var(--notif-size);
+}
+
+#__notif-container > .notif:nth-child(1) {
+	margin-top: 1rem;
+}
+#__notif-container > .notif {
+	width: 82.5%;
+
+	background-color: #e06b48;
+	box-shadow: 0 0 1.563rem 0 #e06b48; /* default values for testing */
+
+	color: white;
+	border-radius: .5rem;
+	backdrop-filter: blur(50%);
+	margin-bottom: 2.5dvh;
+	margin-left: 150dvw;
+
+	transform: translateX(-50%);
+	transition: margin-left var(--transition-speed) ease-in-out;
+
+	box-sizing: border-box;
+	padding: 0.75rem 0.5rem 0.75rem 0.5rem;
+}
+#__notif-container > .notif.active {
+	margin-left: calc(var(--notif-size) / 2);
+}
+#__notif-container > .notif.clickable {
+	cursor: pointer;
+}
+
+#__notif-container > .notif > * {
+	font-size: medium;
+}
+
+#__notif-container > .notif > h3 > span {
+	font-size: 0.85rem;
+	position: relative;
+	top: 0.1rem;
+	margin-right: 0.25rem;
+}
+#__notif-container > .notif > h3 {
+	position: relative;
+	text-transform: uppercase;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	letter-spacing: 0.15ch;
+	top: -0.125rem;
+	margin-bottom: 0.5rem;
+	font-size: 0.85rem;
+}
+
+#__notif-container > .notif > p {
+	font-size: 0.8rem;
+	font-family: Arial, Helvetica, sans-serif;
+    word-break: break-word;
+    white-space: normal;
+}
+
+#__notif-container > .notif[data-amount]::after {
+	content: attr(data-amount);
+	position: absolute;
+	bottom: -0.5rem;
+	right: 0.5rem;
+	height: 1rem;
+	line-height: 1rem;
+	font-size: small;
+	width: 1rem;
+	padding: 0.125rem;
+	border-radius: 100%;
+	background: #333;
+	text-align: center;
+	box-shadow: inherit;
+}
