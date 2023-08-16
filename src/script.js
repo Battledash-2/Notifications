@@ -17,28 +17,33 @@ export function CounterMax(max) {
 	return COUNTER_MAX;
 }
 
-let icons = {
-	info: 'fa-solid fa-circle-info',
-	primary: 'fa-solid fa-circle-info',
-	success: 'fa-solid fa-check',
-	error: 'fa-solid fa-triangle-exclamation',
-	warning: 'fa-solid fa-triangle-exclamation',
+let types = {
+	info: {
+		icon: 'fa-solid fa-circle-info',
+		color: '#333333',
+		caption: 'INFO',
+	},
+	success: {
+		icon: 'fa-solid fa-circle-info',
+		color: '#72cf30',
+		caption: 'SUCCESS',
+	},
+	error: {
+		icon: 'fa-solid fa-triangle-exclamation',
+		color: '#d44c31',
+		caption: 'ERROR',
+	},
+	warning: {
+		icon: 'fa-solid fa-triangle-exclamation',
+		color: '#d9d74c',
+		caption: 'WARNING',
+	},
 };
-let colors = {
-	info: '#333333',
-	primary: '#333333',
-	success: '#72cf30',
-	error: '#d44c31',
-	warning: '#d9d74c',
-};
+types.primary = { ...types.info, icon: 'fa-regular fa-bell' };
 
-export function Colors(clrs) {
-	if (clrs != null) colors = clrs;
-	return colors;
-}
-export function Icons(icns) {
-	if (icns != null) icons = icns;
-	return icons;
+export function Types(typs) {
+	if (typs != null) types = typs;
+	return types;
 }
 
 export function Counter(ctr) {
@@ -82,7 +87,7 @@ function setupForRemoval(elm, duration, cb) {
 }
 
 /**
- * @param {"info"|"primary"|"success"|"warning"|"error"} icon
+ * @param {string | null} icon
  * @param {"info"|"primary"|"success"|"warning"|"error"} color
  * @param {number|Infinity} duration
  * @param {string} text
@@ -91,9 +96,11 @@ function setupForRemoval(elm, duration, cb) {
  * @returns {HTMLElement}
  */
 export function ShowNotification(icon = 'fa-regular fa-bell', color = 'info', duration = 5000, text = 'Unknown', caption = 'Unknown', closable = true) {
-	if (colors.hasOwnProperty(color)) {
-		icon = icons[color] || icon;
-		color = colors[color] || color;
+	if (types.hasOwnProperty(color.toLowerCase())) {
+		let type = types[color];
+		color = type.color;
+		if (icon == null) icon = type.icon;
+		if (caption == null) caption = type.caption;
 	}
 
 	let notif = $c('div', 'notif');

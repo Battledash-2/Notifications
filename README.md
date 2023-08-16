@@ -50,13 +50,20 @@ Notifications will be referred to as `API`.
 
 -   Sets the **max amount** for the small counter if provided.<br />_Returns the new counter max._
 
-> ### `function Icons(icns?: Object): Object;`
+    > ### `function Types(typs?: Object): Object;`
 
--   Sets the default icons object if provided. If the key is also in **Colors** and the _color_ for `API.ShowNotification` is a property of **Colors**, it will set the icon to the corresponding value here.<br />_Returns the new icons object._
+-   Sets the default types object if provided. The types object is a set of key/values, and each key is a type of notification. For example:
 
-> ### `function Colors(clrs?: Object): Object;`
+```js
+	info: {
+		icon: 'fa-solid fa-circle-info',
+		color: '#333333',
+		caption: 'INFO',
+	},
+```
 
--   Sets the default colors object if provided. If colors has a property, it should also be in `Icons`. If you provide a key of **Colors** into the _color_ for `API.ShowNotification`, it will set it to the value from this object, along with setting the Icon to the value from the `Icons` object.<br />_Returns the new colors object._
+-   . With that, if you pass 'info' into the color parameter of the `API.ShowNotification`, it will set the color to the `color` from the object. If the icon parameter is `null`, it will also use the icon from the object. Same goes for the caption. <br />_Returns the new colors object._
+-   Default types are: 'info', 'primary', 'success', 'error', 'warning' (all types **must** be lowercase)
 
 ## You can find an example in `./test/index.html`! 🧪
 
