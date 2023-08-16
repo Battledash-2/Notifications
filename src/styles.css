@@ -20,6 +20,10 @@ body {
 	right: 0;
 	height: 100dvh;
 	width: var(--notif-size);
+	pointer-events: none;
+}
+#__notif-container {
+	pointer-events: initial;
 }
 
 #__notif-container > .notif:nth-child(1) {
