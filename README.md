@@ -10,14 +10,14 @@ Using [Fontawesome](https://fontawesome.com/), you can use tons of clean icons.
 To use Notifications, first **import** the stylesheets in the head, like this:
 
 ```html
-<link rel="stylesheet" href="?" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Battledash-2/Notifications@latest/src/styles.css" />
 ```
 
 To send notifications, **import** the file using the ES6 `import` syntax. Remember that you can only import scripts within modules, so on your script tag you have to use `type="module"`!
 
 ```html
 <script type="module">
-	import * as Notifications from '?';
+	import * as Notifications from 'https://cdn.jsdelivr.net/gh/Battledash-2/Notifications@latest/src/script.js';
 
 	Notifications.ShowNotification(null, 'warning', Infinity, 'Hello!', 'INFO');
 </script>
@@ -51,7 +51,7 @@ Notifications will be referred to as `API`.
 
 > ### `function Icons(icns?: Object)`
 
--   Sets the default icons object if provided. If the key is also in **Colors** and the _color_ for `API.ShowNotification` is a property of **Colors**, it will set the icon to a the corresponding value here.<br />_Returns the new icons object._
+-   Sets the default icons object if provided. If the key is also in **Colors** and the _color_ for `API.ShowNotification` is a property of **Colors**, it will set the icon to the corresponding value here.<br />_Returns the new icons object._
 
 > ### `function Colors(clrs?: Object)`
 
@@ -61,5 +61,5 @@ Notifications will be referred to as `API`.
 
 ### Pictures:<br/>
 
-![example picture](https://raw.githubusercontent.com/Battledash-2/Notifications/main/screenshots/screenshot0.png)<br/>
-![example picture](https://raw.githubusercontent.com/Battledash-2/Notifications/main/screenshots/screenshot1.png)
+![example picture](https://github.com/Battledash-2/Notifications/blob/c49ee8d31e883fd284072598e3728303b966e133/screenshots/screenshot0.png)<br/>
+![example picture](https://github.com/Battledash-2/Notifications/blob/c49ee8d31e883fd284072598e3728303b966e133/screenshots/screenshot1.png)

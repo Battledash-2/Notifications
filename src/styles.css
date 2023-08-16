@@ -22,7 +22,7 @@ body {
 	width: var(--notif-size);
 	pointer-events: none;
 }
-#__notif-container > * {
+#__notif-container {
 	pointer-events: initial;
 }
 
