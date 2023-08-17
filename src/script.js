@@ -96,6 +96,7 @@ function setupForRemoval(elm, duration, cb) {
  * @returns {HTMLElement}
  */
 export function ShowNotification(icon = 'fa-regular fa-bell', color = 'info', duration = 5000, text = 'Unknown', caption = 'Unknown', closable = true) {
+	if (color == null) color = 'primary';
 	if (types.hasOwnProperty(color.toLowerCase())) {
 		let type = types[color];
 		color = type.color;

@@ -62,7 +62,7 @@ Notifications will be referred to as `API`.
 	},
 ```
 
--   . With that, if you pass 'info' into the color parameter of the `API.ShowNotification`, it will set the color to the `color` from the object. If the icon parameter is `null`, it will also use the icon from the object. Same goes for the caption. <br />_Returns the new colors object._
+-   . With that, if you pass 'info' into the color parameter of the `API.ShowNotification`, it will set the color to the `color` from the object. If the icon parameter is `null`, it will also use the icon from the object. Same goes for the caption. When color is `null` or `undefined`, it will default to `primary`. <br />_Returns the new colors object._
 -   Default types are: 'info', 'primary', 'success', 'error', 'warning' (all types **must** be lowercase)
 
 ## You can find an example in `./test/index.html`! 🧪
