@@ -61,9 +61,21 @@ function $c(elm, classList = '') {
 	return e;
 }
 
-const cont = document.querySelector('#__notif-container') || $c('div');
-cont.id = '__notif-container';
-document.body.appendChild(cont);
+let cont = document.querySelector('#__notif-container');
+if (!cont) {
+	cont = $c('div');
+	cont.id = '__notif-container';
+
+	let cont_cont = $c('div');
+	cont_cont.id = '__notif-container-overflow';
+
+	cont_cont.appendChild(cont);
+	document.body.appendChild(cont_cont);
+}
+
+// const cont = document.querySelector('#__notif-container') || $c('div');
+// cont.id = '__notif-container';
+// document.body.appendChild(cont);
 
 /**
  * @param {HTMLElement} elm
